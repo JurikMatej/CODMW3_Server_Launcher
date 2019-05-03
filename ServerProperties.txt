@@ -1,0 +1,43 @@
+// Specify server configuration file (this file)
+	+set sv_config "KalafarCfg.cfg" (default "server.cfg")
+
+// Specify server visibility (1 = LAN, 2 = Internet (default) )
+	+set dedicated 1
+
+// Open game port (Steam-visible server game port)
+	+set net_queryPort 27014
+
+// Secure game port
+	+set net_port 27015
+	
+// Steam authentication port
+	+set net_authPort 8766
+
+// Steam master server (server browser) port
+	+set net_masterServerPort 2701
+
+//Name your dedicated server 
+sv_hostname 
+
+//Set the map rotation on your server
+	sv_maprotation "default"
+
+//To password protect your server
+	set g_password ""
+
+//Max players
+	set sv_maxclients 16
+
+//Rcon Pword
+	set rcon_password "nenodoma"
+
+//Inactivity kick
+	set g_inactivity 150
+	set sv_kickBanTime 30
+
+//Autobalance teams
+	seta scr_teambalance 0
+	
+	map mp_dome
+
+	start_map_rotate
