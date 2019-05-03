@@ -1,0 +1,437 @@
+object Form1: TForm1
+  Left = 298
+  Height = 432
+  Top = 277
+  Width = 939
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Kalafar MW3 Server Launcher'
+  ClientHeight = 432
+  ClientWidth = 939
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.8.2.0'
+  Visible = True
+  object SNameLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 8
+    Width = 102
+    Alignment = taCenter
+    Caption = 'Server Name:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object SPwordLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 56
+    Width = 119
+    Caption = 'Server Pasword:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object GMLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 105
+    Width = 93
+    Caption = 'Gamemode:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object MScoreLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 153
+    Width = 88
+    Caption = 'Score Limit:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object MTimeLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 206
+    Width = 80
+    Caption = 'Map Time:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object TRespawnLabel: TLabel
+    Left = 16
+    Height = 23
+    Top = 254
+    Width = 113
+    Caption = 'Respawn Time:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object Image1: TImage
+    Left = 611
+    Height = 175
+    Top = 16
+    Width = 290
+    Transparent = True
+  end
+  object MapS_Text: TStaticText
+    Left = 678
+    Height = 34
+    Top = 150
+    Width = 150
+    Alignment = taCenter
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -21
+    Font.Name = 'Elephant'
+    Font.Pitch = fpFixed
+    Font.Quality = fqAntialiased
+    ParentFont = False
+    TabOrder = 0
+  end
+  object SNameEdit: TEdit
+    Left = 152
+    Height = 28
+    Top = 8
+    Width = 128
+    Alignment = taCenter
+    Font.Height = -15
+    OnChange = SNameEditChange
+    ParentFont = False
+    TabOrder = 1
+    TextHint = '...'
+  end
+  object SPWordEdit: TEdit
+    Left = 152
+    Height = 28
+    Top = 56
+    Width = 128
+    Alignment = taCenter
+    Font.Height = -15
+    OnChange = SPWordEditChange
+    ParentFont = False
+    TabOrder = 2
+    TextHint = '...'
+  end
+  object ExitBTN: TButton
+    Left = 24
+    Height = 40
+    Top = 376
+    Width = 100
+    Caption = 'Exit'
+    Font.Height = -21
+    OnClick = ExitBTNClick
+    ParentFont = False
+    TabOrder = 16
+  end
+  object Form2BTN: TButton
+    Left = 296
+    Height = 48
+    Top = 96
+    Width = 275
+    Caption = 'Advanced Settings'
+    OnClick = Form2BTNClick
+    TabOrder = 9
+  end
+  object LaunchBTN: TButton
+    Left = 784
+    Height = 40
+    Top = 376
+    Width = 100
+    Caption = 'Launch'
+    Font.Height = -21
+    OnClick = LaunchBTNClick
+    ParentFont = False
+    TabOrder = 15
+  end
+  object MChoseLabel: TLabel
+    Left = 608
+    Height = 23
+    Top = 208
+    Width = 88
+    Caption = 'Select Map:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object MaxPLabel: TLabel
+    Left = 296
+    Height = 23
+    Top = 8
+    Width = 94
+    Caption = 'Max Players:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object AutoBalLabel: TLabel
+    Left = 296
+    Height = 23
+    Top = 201
+    Width = 100
+    Caption = 'Autobalance:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object HardcoreLabel: TLabel
+    Left = 296
+    Height = 23
+    Top = 252
+    Width = 123
+    Caption = 'Hardcore Mode:'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object PWordLabel: TLabel
+    Left = 608
+    Height = 28
+    Top = 336
+    Width = 85
+    Caption = 'Password:'
+    Font.Height = -20
+    ParentColor = False
+    ParentFont = False
+  end
+  object PWordEdit: TEdit
+    Left = 715
+    Height = 31
+    Top = 336
+    Width = 183
+    Alignment = taCenter
+    Font.Height = -17
+    ParentFont = False
+    TabOrder = 14
+    TextHint = 'Palo je ...'
+  end
+  object GM_CBox: TComboBox
+    Left = 152
+    Height = 23
+    Top = 105
+    Width = 128
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 15
+    Items.Strings = (
+      'Team Deathmatch'
+      'Free For All'
+      'Gun Game'
+      'Infected'
+    )
+    OnChange = GM_CBoxChange
+    OnSelect = GM_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 3
+  end
+  object SLimit_CBox: TComboBox
+    Left = 152
+    Height = 23
+    Top = 154
+    Width = 128
+    ItemHeight = 15
+    Items.Strings = (
+      '7500pts'
+      '5000pts'
+      '3000pts'
+      '1500pts'
+    )
+    OnSelect = SLimit_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 4
+  end
+  object MTime_CBox: TComboBox
+    Left = 152
+    Height = 23
+    Top = 206
+    Width = 128
+    ItemHeight = 15
+    Items.Strings = (
+      '15:00'
+      '10:00'
+      '05:00'
+      '02:00'
+    )
+    OnSelect = MTime_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 5
+  end
+  object RTime_CBox: TComboBox
+    Left = 152
+    Height = 23
+    Top = 254
+    Width = 128
+    ItemHeight = 15
+    Items.Strings = (
+      '0sec'
+      '5sec'
+      '7.5sec'
+      '10sec'
+    )
+    OnSelect = RTime_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 6
+  end
+  object MPlayer_CBox: TComboBox
+    Left = 464
+    Height = 23
+    Top = 10
+    Width = 107
+    ItemHeight = 15
+    Items.Strings = (
+      '16 Players'
+      '14 Players'
+      '12 Players'
+      '10 Players'
+      '8 Players'
+      '6 Players'
+    )
+    OnSelect = MPlayer_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 7
+  end
+  object MSel_CBox: TComboBox
+    Left = 728
+    Height = 23
+    Top = 208
+    Width = 125
+    ItemHeight = 15
+    Items.Strings = (
+      'Lockdown'
+      'Bootleg'
+      'Mission'
+      'Carbon'
+      'Dome'
+      'Downturn'
+      'Hardhat'
+      'Interchange'
+      'Fallen'
+      'Bakaara'
+      'Resistance'
+      'Arkaden'
+      'Outpost'
+      'Seatown'
+      'Underground'
+      'Village'
+    )
+    OnSelect = MSel_CBoxSelect
+    Style = csDropDownList
+    TabOrder = 13
+  end
+  object Label1: TLabel
+    Left = 128
+    Height = 15
+    Top = 401
+    Width = 463
+    Caption = 'Kalafar Call of Duty Modern Warfare 3 Custom Server launcher project by: Wimko (2018)'
+    ParentColor = False
+  end
+  object TBalTB: TToggleBox
+    Left = 496
+    Height = 25
+    Top = 202
+    Width = 75
+    Caption = 'Enable'
+    OnChange = TBalTBChange
+    TabOrder = 11
+  end
+  object HModeTB: TToggleBox
+    Left = 496
+    Height = 25
+    Top = 252
+    Width = 75
+    Caption = 'Enable'
+    OnChange = HModeTBChange
+    TabOrder = 12
+  end
+  object Image2: TImage
+    Left = 715
+    Height = 96
+    Top = 232
+    Width = 149
+  end
+  object Image3: TImage
+    Left = 184
+    Height = 88
+    Top = 296
+    Width = 387
+    Transparent = True
+  end
+  object Image4: TImage
+    Left = 584
+    Height = 209
+    Top = 0
+    Width = 344
+  end
+  object Crossout0: TLabel
+    Left = 154
+    Height = 23
+    Top = 152
+    Width = 126
+    Caption = '------------------'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object Crossout1: TLabel
+    Left = 496
+    Height = 23
+    Top = 200
+    Width = 77
+    Caption = '-----------'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 296
+    Height = 23
+    Top = 154
+    Width = 78
+    Caption = 'Force UaV'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object FUavTB: TToggleBox
+    Left = 496
+    Height = 25
+    Top = 154
+    Width = 75
+    Caption = 'Enable'
+    OnChange = FUavTBChange
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Label3: TLabel
+    Left = 296
+    Height = 23
+    Top = 56
+    Width = 87
+    Caption = 'Max Health'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object MaxHP_CB: TComboBox
+    Left = 464
+    Height = 23
+    Top = 56
+    Width = 107
+    ItemHeight = 15
+    Items.Strings = (
+      'Double'
+      'Normal'
+      'Half'
+      'Miniscule'
+    )
+    Style = csDropDownList
+    TabOrder = 8
+  end
+end
