@@ -27,3 +27,8 @@ Made to be used in our __Informatics Class__ back in 2018 to play __Infected__.
     * Gun Game
     * Infected
 * One of the custom classes features a juggernaut suit.
+
+## TODO
+
+* Add structured .zip to the downloads section so this repo does not  
+hold all the binaries
